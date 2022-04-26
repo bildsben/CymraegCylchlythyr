@@ -42,12 +42,12 @@
 
 <script>
 
-    var countDownDate = new Date(new Date("July 2, 2022 12:00:00").toLocaleString("cy", {timeZone: "Europe/London"})).getTime();
+    var countDownDate = new Date(new Date("July 2, 2022 12:00:00").toLocaleString("en-US", {timeZone: "Europe/London"})).getTime();
 
     console.log(countDownDate)
 
     var x = setInterval(function() {
-        var now = new Date(new Date().toLocaleString("cy-CY", {timeZone: "Europe/London"})).getTime();
+        var now = new Date(new Date().toLocaleString("en-US", {timeZone: "Europe/London"})).getTime();
         var distance = countDownDate - now;
 
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -55,8 +55,8 @@
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("time").innerHTML = "Yn Lansio Mewn - " + hours + "h " +
-                                                    minutes + "m " + seconds + "s (12y.b BST)";
+        document.getElementById("time").innerHTML = "Yn Lansio Mewn - " + hours + " oriau, " +
+                                                    minutes + " munud " + seconds + " eiliadau. (12y.b BST)";
         
         
         
